@@ -1,0 +1,18 @@
+body{
+  margin:0;
+  background:#000;
+  overflow:hidden;
+  font-family:Arial, sans-serif;
+}
+
+canvas{
+  display:block;
+}
+
+.score{
+  position:fixed;
+  top:10px;
+  left:10px;
+  color:#0ff;
+  font-size:18px;
+}
