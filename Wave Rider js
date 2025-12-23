@@ -1,0 +1,18 @@
+const c = document.querySelector("canvas"),
+ctx = c.getContext("2d");
+c.width = innerWidth; c.height = innerHeight;
+
+let t = 0;
+function animate(){
+  ctx.clearRect(0,0,c.width,c.height);
+  ctx.beginPath();
+  ctx.strokeStyle = "cyan";
+  for(let x=0; x<c.width; x++){
+    let y = c.height/2 + Math.sin((x+t)/25)*70;
+    ctx.lineTo(x,y);
+  }
+  ctx.stroke();
+  t += 2;
+  requestAnimationFrame(animate);
+}
+animate();
